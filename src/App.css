@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+body {
+  background-color: #161616;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table {
+  width: 100%;
+  background-color: #393939;
+  color: #fff;
+  border-collapse: collapse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-row {
+  background-color: #393939;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.data-row:nth-child(even) {
+  background-color: #393939;
+  color: #fff;
+}
+
+.data-row:nth-child(odd) {
+  background-color: #555;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+}
+
+.select-dropdown {
+  background-color: #555;
+  color: #fff;
+  margin: 10px;
+}
+
+#high {
+  color: red;
+}
+
+#mid {
+  color: blue;
+}
+
+#low {
+  color: yellow;
+}
+
+.status-cell {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 20%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.status-cell.blue {
+  background-color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status-cell.light-orange {
+  background-color: lightorange;
+}
+
+.status-cell.gray {
+  background-color: gray;
+}
+
+
+.data-row .summary-cell {
+  max-height: 1.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
